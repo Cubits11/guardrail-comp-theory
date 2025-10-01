@@ -1,0 +1,20 @@
+\section{Fr\'echet--Hoeffding bounds}
+Let $U,V\in\{0,1\}$ with means $\mu_U=\Prb[U=1]$ and $\mu_V=\Prb[V=1]$. The Fr\'echet--Hoeffding
+(FH) inequality states
+\[
+\max\bigl\{0,\mu_U+\mu_V-1\bigr\} \le \Prb[U=1,V=1] \le \min\{\mu_U,\mu_V\}.
+\]
+For guardrail rails we define class-conditional marginals
+$\alpha_y=\Prb(A=1\mid Y=y)$ and $\beta_y=\Prb(B=1\mid Y=y)$.
+
+For harmful items ($Y=1$) the AND composition obeys
+\[
+p_1=\Prb(A\wedge B=1\mid Y=1)\in [L_1,U_1], \quad
+L_1=\max\{0,\alpha_1+\beta_1-1\}, \quad U_1=\min\{\alpha_1,\beta_1\}.
+\]
+For benign items ($Y=0$) the OR composition satisfies
+\[
+p_0=\Prb(A\vee B=1\mid Y=0)\in [L_0,U_0], \quad
+L_0=\max\{\alpha_0,\beta_0\}, \quad U_0=\min\{1,\alpha_0+\beta_0\}.
+\]
+These intervals are sharp without additional structure or coupling assumptions.
