@@ -1,0 +1,31 @@
+\section{A Composition Trilemma under Fixed Marginals}
+
+\begin{definition}[Quantities]
+Let $Y\in\{0,1\}$ with $Y=1$ harmful. Rails $A,B\in\{0,1\}$ satisfy
+$\alpha_y=\Prb(A=1\mid Y=y)$ and $\beta_y=\Prb(B=1\mid Y=y)$. Define
+\[
+p_1=\Prb(A\wedge B=1\mid Y=1),\qquad
+p_0=\Prb(A\vee B=1\mid Y=0),\qquad
+o_1=\Prb(A=1,B=1\mid Y=1)=p_1.
+\]
+\end{definition}
+
+\begin{theorem}[Trilemma]\label{thm:trilemma}
+With only class-conditional marginals fixed and no dependence information beyond FH bounds,
+one cannot simultaneously (a) drive $p_1$ to its ceiling, (b) keep $o_1$ near its floor,
+and (c) bound $p_0$ away from its ceiling uniformly over admissible couplings.
+\end{theorem}
+
+\begin{proof}
+For $Y=1$, FH bounds give $p_1\in[L_1,U_1]$ with $U_1=\min(\alpha_1,\beta_1)$ attained by a
+co-monotone coupling and $L_1=\max(0,\alpha_1+\beta_1-1)$ attained by an anti-monotone coupling.
+Because $o_1=p_1$, pushing $p_1$ toward $U_1$ necessarily increases $o_1$. For $Y=0$, FH bounds give
+$p_0\in[L_0,U_0]$ with $U_0=\min(1,\alpha_0+\beta_0)$. Cross-class couplings are unconstrained; we may
+simultaneously select a $Y=1$ coupling that maximises $p_1$ and a $Y=0$ coupling that maximises $p_0$.
+Therefore the triple objective is infeasible absent additional structure.
+\end{proof}
+
+\begin{remark}[Escapes]
+Incorporating dependence constraints, causal separation, randomised mechanisms, or multi-rail structure
+shrinks FH rectangles and can restore feasible trade-offs.
+\end{remark}

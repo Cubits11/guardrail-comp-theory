@@ -1,0 +1,9 @@
+\section{PAC-Robust Confidence Intervals}
+With $n_1$ harmful samples we let $\hat p_1$ denote the empirical AND rate. Bernstein inversion yields a
+confidence interval $\Prb\bigl(p_1 \in [\hat p_1 - t,\hat p_1 + t]\bigr) \ge 1-\delta$ with
+\[
+t = \mathcal{O}\!\left(\sqrt{\frac{\mathrm{Var}(A\wedge B)\log(1/\delta)}{n_1}}\right),
+\]
+where variance is upper-bounded using the FH interval. Under domain shift characterised by the
+$\mathcal{H}\Delta\mathcal{H}$ distance $\eta$, the Ben-David bound contributes an additive $\eta/2$ to the
+half-width, capturing the price of adaptation.

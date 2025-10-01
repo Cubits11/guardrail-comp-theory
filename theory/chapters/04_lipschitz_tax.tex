@@ -1,0 +1,10 @@
+\section{Adversarial FH Tax via Lipschitz Shifts}
+Assume the harmful class distribution $P_1$ may drift within a Wasserstein-$\epsilon$ ball yielding
+$Q_1$. If rails $A$ and $B$ are $L_A$- and $L_B$-Lipschitz with respect to a metric $d$ on the feature
+space, Kantorovich--Rubinstein duality bounds the shift in each marginal by $\epsilon L_A$ and
+$\epsilon L_B$. The AND ceiling therefore inflates to
+\[
+\Prb_{Q_1}(A\wedge B=1) \le \min\{\alpha_1,\beta_1\} + \epsilon (L_A + L_B),
+\]
+illustrating the Lipschitz "tax". Smoother (e.g. randomly smoothed) rails reduce $L_A$ and $L_B$, while
+non-smooth rails render the bound vacuous.
